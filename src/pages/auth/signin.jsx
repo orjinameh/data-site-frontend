@@ -7,6 +7,7 @@ import { UserContext } from '../../context/Context'
 import { ThreeCircles } from 'react-loader-spinner'
 
 export default function Signin() {
+  const { backendBaseUrl } = useContext(UserContext)
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -23,7 +24,7 @@ export default function Signin() {
 
   const navigate = useNavigate();
 
-  const api = 'https://datasite-h33s.onrender.com/data/auth/login'
+  const api = `${backendBaseUrl}/data/auth/login`
   const onSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -42,19 +43,23 @@ export default function Signin() {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+          'Authorization': `Bearer ${data.token}`,
         }
       }
-      const resp = await fetch(api, reqOpts)
+      const link = `${backendBaseUrl}/data/me/get`
+      const resp = await fetch(link, reqOpts)
       const resData = await resp.json();
+      console.log(resData)
       setUserData((prevState) => {
         return {
-          resData
+          ...prevState,
+          balance: 'resData.balance'
         }
       });
       localStorage.setItem('jwtToken', (data.token));
       localStorage.setItem('name', (data.name));
       localStorage.setItem('email', (data.email));
+      setUserData(userData)
       console.log(userData)
       navigate('/');
     }
