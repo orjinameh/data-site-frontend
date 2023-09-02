@@ -1,0 +1,22 @@
+@media (max-width:650px) {
+    .intro-container{
+        background-color: var(--primary1);
+        padding-left: 10px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+        padding-right: 10px;
+        color: var(--light);
+    }
+
+    .fund-wallet{
+        background-color: var(--secondary1);
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        height: 30px;
+        font-family: myBoldFont;
+        color: var(--primary1);
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+}

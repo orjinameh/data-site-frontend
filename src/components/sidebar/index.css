@@ -1,0 +1,69 @@
+@media (max-width:650px) {
+    .sidebar-div{
+        font-size: 4.5vw;
+        font-family: myboldfont;
+    }
+    
+    .user-menu{
+        margin-top: 1vh;
+        display: grid;
+    }
+    
+    .user-menu a{
+        padding: 5vw;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+        margin: 1vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    
+    .user-menu a.active{
+        background-color: var(--secondary2);
+    }
+    
+    .profile-sidebar img{
+        width: 5vw;
+    }
+    .auth{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw;
+    }
+    
+    .auth a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .user-detail{
+        padding: 2vw;
+        padding-left: 30px;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .user-details a{
+        font-size: 4vw;
+        padding: 1vw;
+        margin: 0vw;
+        margin-left: 40vw;
+        margin-right: 10px;
+        border-radius: 2vw;
+        background-color: var(--secondary1);
+    }
+    
+    .user-detail p:nth-child(1){
+        font-size: 5.5vw;
+        padding-bottom: 2vw;
+    }
+    
+    .user-detail img{
+        width: 15vw;
+    }
+    
+}

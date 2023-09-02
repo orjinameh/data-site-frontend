@@ -1,0 +1,21 @@
+@media (max-width:650px) {
+    .nav-container{
+        font-family: myFont;
+        color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        background-color: var(--primary1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        border-bottom: 1px solid #000000ac;
+    }
+    
+    .nav-container svg{
+        width: 30px;
+    }
+
+}

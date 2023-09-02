@@ -1,0 +1,23 @@
+.data-form{
+    margin: 15vw;
+    display: grid;
+}
+
+.data-form input, select, option{
+    border: 2px solid;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.data-form button{
+    margin-top: 2vw;
+    border-radius: 10px;
+    color: var(--secondary1);
+    background-color: var(--primary1);
+}
+
+.data-form header{
+    font-family: myboldfont;
+}
+
