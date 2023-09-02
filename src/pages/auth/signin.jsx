@@ -49,7 +49,7 @@ export default function Signin() {
       const resData = await resp.json();
       setUserData((prevState) => {
         return {
-          ...resData
+          resData
         }
       });
       localStorage.setItem('jwtToken', (data.token));
