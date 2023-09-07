@@ -11,20 +11,22 @@ const Intro = () => {
     const {userData,setUserData}=useContext(UserDataContext)
     useEffect(() => {
         const req = async () => {
-            setIsLoading(true);
-            const reqOpts = {
-                method: 'GET',
-                headers: {
-                    'Content-Type':'application/json',
-                    'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+            if (localStorage.getItem('jwtToken')) {
+                setIsLoading(true);
+                const reqOpts = {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type':'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+                    }
                 }
+                const request = await fetch(`${backendBaseUrl}/data/me/get`, reqOpts)
+                const json = await request.json()
+                setUserData(...json)
+                json?setIsLoading(false):setIsLoading(true)
+            };
+            req();
             }
-            const request = await fetch(`${backendBaseUrl}/data/me/get`, reqOpts)
-            const json = await request.json()
-            setUserData(...json)
-            json?setIsLoading(false):setIsLoading(true)
-        };
-        req();
     },[])
     return (
         <div className="intro-container">
