@@ -3,6 +3,7 @@ import {objects1, objects2} from "./__divObjects";
 import {ContComp,ContComp2,ContComp3} from "./__comp";
 import "./index.css"
 import { UserDataContext } from "../../../context/UserContext";
+import { Link } from "react-router-dom";
 
 const HomeContent = () => {
     const {userData}=useContext(UserDataContext)
@@ -18,13 +19,11 @@ const HomeContent = () => {
             <div className="todo-container">
                 {
                     objects2.map((obj)=>
-                        <ContComp3 key={obj.id} icon={obj.icon} title={obj.title}/>
+                        <Link key={obj.id} to={obj.path}>
+                            <ContComp3 icon={obj.icon} title={obj.title}/>
+                        </Link>
                     )
                 }
-            </div>
-            <ContComp2 title="Notifications" text="Paystack Payment successful you account has been credited with the sum of ₦142" button="all messages"/>
-            <ContComp2 title="FAQs:" text="Please go through them to have to have a better knowledge of this platform" button="?FAQs"/>
-            <ContComp2 title="Support Team:" text="Have anything to say to us? Please contact our Support Team on Whatsapp" button="whatsapp us"/>
             <div className="transaction-stats-container">
                 <div className="stats-title">
                     TRANSACTION STATISTICS
@@ -51,6 +50,10 @@ const HomeContent = () => {
                     </div>
                 </div>
             </div>
+            </div>
+            <ContComp2 title="Notifications" text="Paystack Payment successful you account has been credited with the sum of ₦142" button="all messages"/>
+            <ContComp2 title="FAQs:" text="Please go through them to have to have a better knowledge of this platform" button="?FAQs"/>
+            <ContComp2 title="Support Team:" text="Have anything to say to us? Please contact our Support Team on Whatsapp" button="whatsapp us"/>
         </div>
     );
 }

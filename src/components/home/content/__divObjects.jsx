@@ -47,35 +47,42 @@ export const objects2 = [
                                 id:1,
                                 icon: <img src={simCard} alt="" />,
                                 title:"Airtime TopUp",
+                                path:"",
                             },
                             {
                                 id:2,
                                 icon: <img src={wifi} alt="" />,
                                 title:"Buy Data",
+                                path:"data-sub",
                             },
                             {
                                 id:3,
                                 icon: <img src={lightbulb} alt="" />,
                                 title:"Electricity Bills",
+                                path:"",
                             },
                             {
                                 id:4,
                                 icon: <img src={tv} alt="" />,
                                 title:"Cable Subscription",
+                                path:"",
                             },
                             {
                                 id:5,
                                 icon: <img src={bulkSms} alt="" />,
                                 title:"Bulk SMS",
+                                path:"",
                             },
                             {
                                 id:6,
                                 icon: <img src={result} alt="" />,
                                 title:"Result Checker",
+                                path:"",
                             },
                             {
                                 id:7,
                                 icon: <img src={peopleLine} alt="" />,
                                 title:"My Referrals",
+                                path:"",
                             },
                         ]
