@@ -21,6 +21,9 @@
         font-size: 10vw;
         font-family: myboldfont;
     }
+    .reg p{
+        margin: 0;
+    }
     .sign-up-page form{
         display: grid;
         place-items: center;

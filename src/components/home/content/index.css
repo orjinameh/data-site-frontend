@@ -1,23 +1,4 @@
 @media (max-width:650px) {
-    .home-content1{
-        background-color: var(--light);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 3vw;
-        margin-right: 3vw;
-        margin-top: 15px;
-        border-radius: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    
-    .home-content2{
-        margin-top: 40px;
-        display: flex;
-        box-shadow: 0px 0px 20px var(--shadow);
-    }
 
     .obj-half-div{
         background-color: var(--light);
@@ -65,21 +46,6 @@
         align-items: center;
         margin-left: 10px;
         justify-content: flex-start;
-    }
-    
-    .obj-cont-comp-title{
-        width: 60vw;
-        font-size: 5vw;
-        color: var(--gray2);
-        display: grid;
-        align-content: start;
-    }
-    .obj-cont-comp-title p:nth-child(2){
-        margin-top: 17px;
-        color: var(--dark);
-        font-family: myboldfont, 'Arial';
-        font-weight: bolder;
-        font-size: 5vw;
     }
 
     .home-content3{
@@ -129,7 +95,7 @@
         display: grid;
         place-items: center;
         align-items: center;
-        width: 44vw;
+        width: 25vw;
         margin-bottom: 20px;
         box-shadow: 0px 0px 20px var(--shadow);
         border-radius: 6px;
@@ -141,16 +107,16 @@
     }
 
     .todo-items p{
-        font-size: 4.3vw;
+        font-size: 2.3vw;
         color: var(--gray);
     }
 
     .todo-items div{
         box-sizing: content-box;
         background-color: var(--primary1);
-        padding: 5vw;
-        width: 20vw;
-        height: 20vw;
+        padding: 2vw;
+        width: 7vw;
+        height: 7vw;
         margin-top: 5vw;
         border-radius: 15vw;
         display: flex;
@@ -159,7 +125,7 @@
     }
 
     .todo-items img{
-        width: 15vw;
+        width: 6vw;
     }
 
     .transaction-stats-container{

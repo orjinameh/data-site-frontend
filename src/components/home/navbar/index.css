@@ -1,21 +1,100 @@
 @media (max-width:650px) {
     .nav-container{
-        font-family: myFont;
-        color: var(--light);
+        font-family: myboldFont;
+        color: var(--dark);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 10vh;
-        background-color: var(--light);
+        height: 8vh;
+        background-color: var(--secondary2);
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         border-bottom: 1px solid #000000ac;
+        font-size: 5vw;
     }
     
     .nav-container svg{
         width: 30px;
     }
 
+    .nav-div-cont{
+        display: block;
+        place-items: center;
+    }
+
+    .nav-container span{
+        color: var(--gray);
+    }
+
+    .nav-container div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .more-user{
+        border: 2px solid;
+        padding: 2px;
+        background-color: var(--secondary2);
+        position: fixed;
+        margin-top: -2.3vh;
+        margin-left: 5vw;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: myboldfont;
+        gap: 10px;
+    }
+
+    .more-user svg{
+        width: 5vw;
+        transform: rotate(180deg);
+    }
+
+    .auths{
+        font-family: myboldFont;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 8vh;
+        background-color: var(--secondary2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        border-bottom: 1px solid #000000ac;
+        font-size: 5vw;
+        padding: 2.5vw;
+    }
+    .nav-container div .circle{
+        width: 10vw;
+        height: 10vw;
+        box-sizing: content-box;
+        padding: 1px;
+        font-size: 8vw;
+        font-family: myfont;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--primary1);
+        border-radius: 100vw;
+        background-color: var(--primary2);
+    }
+
+    .nav-container svg{
+        fill: #f2f2f2;
+        width: 3.2vh;
+        stroke: black;
+        stroke-width: 50;
+        stroke-linecap: square;
+        stroke-dasharray: 0px;
+    }
+
+    .auths svg{
+        width: 5vw;
+    }
 }

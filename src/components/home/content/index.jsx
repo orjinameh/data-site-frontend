@@ -15,7 +15,6 @@ const HomeContent = () => {
     return (
         <div className="home-div-div">
             {userData.name}
-            <ContComp icon={icon} title="Wallet Balance" text={`₦${userData.balance}`}/>
             <div className="todo-container">
                 {
                     objects2.map((obj)=>

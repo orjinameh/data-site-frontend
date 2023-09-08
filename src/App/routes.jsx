@@ -7,38 +7,43 @@ import PaystackFund from '../components/paystack'
 import Data from '../components/Data'
 
 export default function RouteObjs() {
-  return (
-    [
-        {
-            id:1,
-            path:'/',
-            element:<Home/>
-        },
-        {
-            id:2,
-            path:'/dashboard',
-            element:<Home/>
-        },
-        {
-            id:3,
-            path:'auth/login',
-            element: <Signin/>
-        },
-        {
-            id:4,
-            path:'auth/signup',
-            element: <Signup/>
-        },
-        {
-            id:5,
-            path:'/data-sub',
-            element: <Data/>
-        },
-        {
-            id:6,
-            path:'fund',
-            element: <PaystackFund/>
-        },
-    ]
-  )
+    return (
+        [
+            {
+                id: 1,
+                path: '/',
+                element: <Home />
+            },
+            {
+                id: 2,
+                path: '/dashboard',
+                element: <Home />
+            },
+            {
+                id: 3,
+                path: 'auth/login',
+                element: <Signin />
+            },
+            {
+                id: 4,
+                path: 'auth/signup',
+                element: <Signup />
+            },
+            {
+                id: 5,
+                path: '/data-sub',
+                element: <Data />
+            },
+            {
+                id: 6,
+                path: '/fund',
+                element: <PaystackFund />
+            },
+            {
+                id: 7,
+                path: '/notification',
+                element: <Notification />
+            },
+        ]
+    )
 }
