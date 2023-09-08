@@ -102,7 +102,7 @@
         background-color: var(--light);
     }
 
-    .todo-items svg{
+    .todo-items svg{ 
         width: 30vw;
     }
 
