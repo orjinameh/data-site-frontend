@@ -7,7 +7,7 @@ function Data() {
   const [network,setNetwork] = useState(null);
   const [number,setNumber] = useState(null);
   const [amount,setAmount] = useState(null);
-  const api = `https://smartrecharge.ng/api/v2/datashare/?api_key=0rp40z0w4srflnkf97hnav6nlqv9p31kwv86s9l&product_code=data_share_${network}_${amount}_30days&phone=${number}`
+  const api = `https://smartrecharge.ng/api/v2/datashare/?api_key=0rp40z0w4srflnkf97hnav6nlqv9p31kwv86s9l&product_code=data_share_${network}_${amount}&phone=${number}`
   useEffect(()=>{
       localStorage.getItem('name')?'':navigate('/auth/login')
   })
@@ -38,7 +38,18 @@ function Data() {
         <header>mobile number</header>
         <input type="number" onChange={(e)=>setNumber(e.target.value)} name="mobile-number" id="" />
         <header>amount</header>
-        <input type="text" placeholder='500mb or 1gb' name="amount" onChange={(e)=>setAmount(e.target.value)} id="" />
+        <select name="amount" id="" onChange={(e)=>setAmount(e.target.value)}>
+          <option value="neutral">--------</option>
+          <option value="100mb_7days">100mb_7days</option>
+          <option value="300mb_7days">300mb_7days</option>
+          <option value="500mb_30days">500mb_30days</option>
+          <option value="1gb_30days">1gb_30days</option>
+          <option value="2gb_30days">2gb_30days</option>
+          <option value="5gb_30days">5gb_30days</option>
+          <option value="10gb_30days">10gb_30days</option>
+          <option value="15gb_30days">15gb_30days</option>
+          <option value="20gb_30days">20gb_30days</option>
+        </select>
         <button type="submit">Buy Now</button>
     </form>
   )
