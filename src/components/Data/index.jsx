@@ -13,6 +13,10 @@ function Data() {
   useEffect(()=>{
       localStorage.getItem('name')?'':navigate('/auth/login')
   })
+  const handSubmit = ()=>{
+    alert('balance not enough!');
+    navigate('/')
+  }
   const handleSubmit= async (e)=>{
     e.preventDefault();
     const requestOptions = {
@@ -31,7 +35,7 @@ function Data() {
     <form 
     onSubmit={
     userData.balance>=amount?
-    handleSubmit:alert('balance not enough!')} 
+    handleSubmit:handSubmit} 
     className='data-form'>
         <header>Network</header>
         <select name="network" onChange={(e)=>setNetwork(e.target.value)} id="">
