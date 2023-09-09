@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './index.css'
 import { useNavigate } from 'react-router-dom';
+import { UserDataContext } from '../../context/UserContext';
 
 function Data() {
+  const {userData} = useContext(UserDataContext)
   const navigate = useNavigate();
   const [network,setNetwork] = useState(null);
   const [number,setNumber] = useState(null);
@@ -26,7 +28,11 @@ function Data() {
     console.log(response)
   }
   return (
-    <form onSubmit={handleSubmit} className='data-form'>
+    <form 
+    onSubmit={
+    userData.balance>=amount?
+    handleSubmit:alert('balance not enough!')} 
+    className='data-form'>
         <header>Network</header>
         <select name="network" onChange={(e)=>setNetwork(e.target.value)} id="">
             <option value="nuetral">-------</option>
