@@ -60,7 +60,6 @@ function PaystackFund() {
       } 
       return (
         <div className="paystack-div">
-            {email}
             {isLoading?
             <ThreeCircles
             height="100"
