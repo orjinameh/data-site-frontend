@@ -9,13 +9,14 @@ import { ThreeCircles } from "react-loader-spinner";
 function PaystackFund() {
     const navigate = useNavigate();
     const [isLoading,setIsLoading]=useState(false);
+    const {userData, setUserData} = useContext(UserDataContext)
     useEffect(()=>{
+        setEmail(localStorage.getItem('email'))
         localStorage.getItem('name')?'':navigate('/auth/login')
     })
-    const {userData, setUserData} = useContext(UserDataContext)
     const {backendBaseUrl}=useContext(UserContext)
     const [amount, setAmount] = useState('')
-    const [email, setEmail] = useState(userData.email)
+    const [email, setEmail] = useState(localStorage.getItem('email'))
     const charge = amount*.03
     const total= (+amount+charge)
     const paystackAmount=total*100
@@ -59,7 +60,7 @@ function PaystackFund() {
       } 
       return (
         <div className="paystack-div">
-            iu{email}
+            {email}
             {isLoading?
             <ThreeCircles
             height="100"

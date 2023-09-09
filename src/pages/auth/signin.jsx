@@ -53,7 +53,7 @@ export default function Signin() {
       setUserData((prevState) => {
         return {
           ...prevState,
-          balance: 'resData.balance'
+          balance: resData.balance
         }
       });
       localStorage.setItem('jwtToken', (data.token));
