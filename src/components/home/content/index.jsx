@@ -24,6 +24,10 @@ const HomeContent = () => {
                         </Link>
                     )
                 }
+            </div>
+            <ContComp2 title="Notifications" text="Paystack Payment successful you account has been credited with the sum of ₦142" button="all messages"/>
+            <ContComp2 title="FAQs:" text="Please go through them to have to have a better knowledge of this platform" button="?FAQs"/>
+            <ContComp2 title="Support Team:" text="Have anything to say to us? Please contact our Support Team on Whatsapp" button="whatsapp us"/>
             <div className="transaction-stats-container">
                 <div className="stats-title">
                     TRANSACTION STATISTICS
@@ -32,28 +36,24 @@ const HomeContent = () => {
                     {icon}
                     <div>
                         <p>WALLET BALANCE</p>
-                        <p>&#8358;{userData.balance}</p>
+                        <p>&#8358;{userData.balance?userData.balance:'0'}</p>
                     </div>
                 </div>
                 <div className="stats-items">
                     {icon}
                     <div>
                         <p>TOTAL FUNDING</p>
-                        <p>&#8358;{userData.totalFunding}</p>
+                        <p>&#8358;{userData.totalFunding?userData.totalFunding:"0"}</p>
                     </div>
                 </div>
                 <div className="stats-items">
                     {icon}
                     <div>
                         <p>TOTAL SPENT</p>
-                        <p>&#8358;{userData.totalSpent}</p>
+                        <p>&#8358;{userData.totalSpent?userData.totalSpent:'0'}</p>
                     </div>
                 </div>
             </div>
-            </div>
-            <ContComp2 title="Notifications" text="Paystack Payment successful you account has been credited with the sum of ₦142" button="all messages"/>
-            <ContComp2 title="FAQs:" text="Please go through them to have to have a better knowledge of this platform" button="?FAQs"/>
-            <ContComp2 title="Support Team:" text="Have anything to say to us? Please contact our Support Team on Whatsapp" button="whatsapp us"/>
         </div>
     );
 }

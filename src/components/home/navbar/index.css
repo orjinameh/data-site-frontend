@@ -5,7 +5,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 8vh;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        /* height: 8vh; */
         background-color: var(--secondary2);
         position: fixed;
         top: 0;
@@ -15,6 +17,9 @@
         font-size: 5vw;
     }
     
+    .activ.active svg{
+        fill: var(--primary1);
+    }
     .nav-container svg{
         width: 30px;
     }

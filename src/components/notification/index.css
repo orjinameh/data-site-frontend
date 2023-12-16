@@ -1,0 +1,21 @@
+@media (max-width:650px) {
+    .notification-div{
+        padding-left: 2.5vw;
+        padding-right: 2vw;
+    }
+    .head-header{
+        display: flex;
+        height: 7vh;
+        /* width: 100vw; */
+    }
+    .back-btn{
+        width: 6.5vw;
+        /* background-color: aqua; */
+    }
+    .head-header h1{
+        width: fit-content;
+        margin: auto;
+        font-size: 7vw;
+        transform: translate(-4.5vw,0%);
+    }
+}

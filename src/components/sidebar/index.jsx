@@ -28,7 +28,7 @@ export default function Sidebar() {
             </div>
             <div className="user-detail-details">
               <p>{localStorage.getItem('name')}</p>
-              <p>balance: {}{userData.balance}</p>
+              <p>balance: {userData.balance?userData.balance:'0'}</p>
             </div>
           </div>
           <NavLink  to="/auth/login" 

@@ -5,6 +5,7 @@ import Signin from '../pages/auth/signin'
 import Signup from '../pages/auth/signup'
 import PaystackFund from '../components/paystack'
 import Data from '../components/Data'
+import Notifications from '../components/notification'
 
 export default function RouteObjs() {
     return (
@@ -42,7 +43,7 @@ export default function RouteObjs() {
             {
                 id: 7,
                 path: '/notification',
-                element: <Notification />
+                element: <Notifications />
             },
         ]
     )

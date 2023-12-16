@@ -3,6 +3,10 @@
         width: 12vw;
         margin-right: 3vw;
     }
+    .resp{
+        color: crimson;
+        font-family: myboldfont;
+    }
     .attent-reg p{
         margin-top: 0px;
         display: flex;

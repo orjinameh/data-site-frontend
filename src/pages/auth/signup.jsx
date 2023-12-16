@@ -4,9 +4,12 @@ import user from "../../assets/svgs/user.svg"
 import { UserDataContext } from '../../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 import { ThreeCircles } from "react-loader-spinner";
+import { UserContext } from '../../context/Context'
 
 export default function Signup() {
+  const [reqresponse,setReqresponse] = useState(null)
   const navigate = useNavigate();
+  const {backendBaseUrl}=useContext(UserContext)
   const [isLoading, setIsLoading] = useState(false);
   const { userData, setUserData } = useContext(UserDataContext)
   const [formData, setFormData] = useState({
@@ -32,9 +35,9 @@ export default function Signup() {
         'Content-Type': 'application/json'
       }
     };
-    const response = await fetch('https://datasite-h33s.onrender.com/data/auth/signup', requestOptions)
+    const response = await fetch(`${backendBaseUrl}/data/auth/signup`, requestOptions)
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     const requestUserLoginOptions = {
       method: 'POST',
       body: JSON.stringify({ email, password }),
@@ -42,9 +45,9 @@ export default function Signup() {
         'Content-Type': 'application/json',
       }
     };
-    const Log = await fetch('https://datasite-h33s.onrender.com/data/auth/login', requestOptions)
-    const log = await Log.json();
     if (response.status === 200) {
+      const Log = await fetch(`${backendBaseUrl}/data/auth/login`, requestUserLoginOptions)
+      const log = await Log.json();
       // Save jwt token to localStorage
       setUserData((prevState) => ({
         ...prevState,
@@ -55,30 +58,39 @@ export default function Signup() {
       localStorage.setItem('jwtToken', (log.token));
       localStorage.setItem('name', (log.name));
       navigate('/');
+      const requestUserOptions = {
+        method: 'POST',
+        body: JSON.stringify({
+          user: userData.user,
+          email: userData.email,
+          transactions: userData.transactions,
+          notifications: userData.notifications,
+          balance: userData.balance,
+          plan: userData.plan,
+          refs: userData.refs,
+          totalFunding: userData.totalFunding,
+          totalSpent: userData.totalSpent,
+        }),
+        headers: {
+          'Authorization': `Bearer ${log.token}`,
+          'Content-Type': 'application/json',
+        }
+      };
+      const createUserData = await fetch(`${backendBaseUrl}/data/me/post`, requestUserOptions)
+      const UserDatas = await createUserData.json();
+      UserDatas ? setIsLoading(false) : setIsLoading(true)
+      // console.log(UserDatas)
     }
-
-    const requestUserOptions = {
-      method: 'POST',
-      body: JSON.stringify({
-        user: userData.user,
-        email: userData.email,
-        transactions: userData.transactions,
-        notifications: userData.notifications,
-        balance: userData.balance,
-        plan: userData.plan,
-        refs: userData.refs,
-        totalFunding: userData.totalFunding,
-        totalSpent: userData.totalSpent,
-      }),
-      headers: {
-        'Authorization': `Bearer ${log.token}`,
-        'Content-Type': 'application/json',
+    else{
+      setIsLoading(false)
+      setTimeout(()=>
+      {
+        setReqresponse(null)
       }
-    };
-    const createUserData = await fetch('https://datasite-h33s.onrender.com/data/me/post', requestUserOptions)
-    const UserDatas = await createUserData.json();
-    UserDatas ? setIsLoading(false) : setIsLoading(true)
-    console.log(UserDatas)
+      ,2000);
+      setReqresponse(data.error)
+      // console.log(reqresponse)
+    }
   };
   return (
     <div className='sign-up-page sign-div'>
@@ -137,6 +149,7 @@ export default function Signup() {
             placeholder="Confirm your password" />
         </div>
         <button>Submit</button>
+        <div className='resp'>{reqresponse}</div>
       </form>
     </div>
   )

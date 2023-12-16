@@ -20,8 +20,9 @@ function PaystackFund() {
     const charge = amount*.03
     const total= (+amount+charge)
     const paystackAmount=total*100
-    const newAmount = +amount + +userData.balance
+    const newAmount = +amount + userData.balance
     const publicKey="pk_live_69904fd18ac3114e5df7953af0400ebd377cd451"
+    // const publicKey="pk_live_69904fd18ac3114e5df7953af0400ebd377cd451"
     const componentProps = {
         email,
         amount:paystackAmount,

@@ -15,19 +15,19 @@ const Intro = () => {
     const {userData,setUserData}=useContext(UserDataContext)
     useEffect(() => {
         if (localStorage.getItem('jwtToken')) {
-                const req = async () => {
-                    setIsLoading(true);
-                    const reqOpts = {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type':'application/json',
-                            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
-                        }
+            setIsLoading(true);
+            const req = async () => {
+                const reqOpts = {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type':'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
                     }
-                    const request = await fetch(`${backendBaseUrl}/data/me/get`, reqOpts)
-                    const json = await request.json()
-                    setUserData(...json)
-                    json?setIsLoading(false):setIsLoading(true)
+                }
+                const request = await fetch(`${backendBaseUrl}/data/me/get`, reqOpts)
+                const json = await request.json()
+                setUserData({...json})
+                json?setIsLoading(false):setIsLoading(true)
             };
             req();
             }
@@ -58,7 +58,7 @@ const Intro = () => {
                     </div> */}
                     <div className="obj-cont-comp-title">
                         <p>Wallet balance</p>
-                        <p>NGN {localStorage.getItem('jwtToken')?userData.balance:'0'}</p>
+                        <p>NGN {userData.balance?userData.balance:'0'}</p>
                         <Link to={localStorage.getItem('jwtToken')?'/fund':'/auth/login'}>Fund Wallet +</Link>
                     </div>
                 {/* </div> */}

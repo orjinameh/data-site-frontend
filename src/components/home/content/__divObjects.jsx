@@ -53,7 +53,7 @@ export const objects2 = [
                                 id:2,
                                 icon: <img src={wifi} alt="" />,
                                 title:"Buy Data",
-                                path:"data-sub",
+                                path:"/data-sub",
                             },
                             {
                                 id:3,
