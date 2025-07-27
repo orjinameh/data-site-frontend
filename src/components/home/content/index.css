@@ -1,0 +1,190 @@
+@media (max-width:650px) {
+
+    .obj-half-div{
+        background-color: var(--light);
+        box-shadow: 0px 0px 20px var(--shadow);
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        display: flex;
+        padding-left: 5px;
+        padding-right: 5px;
+        justify-content: space-between;
+        width: 43vw;
+        border-radius: 5px;
+        color: var(--gray);
+        font-family: myBoldFont, 'Arial';
+        font-size: 4vw;
+        font-weight: bolder;
+    }
+    
+    .obj-half-icon svg{
+        display: flex;
+        width: 8vw;
+        height: 60px;
+    }
+    
+    .icon-2{
+        width: 15vw;
+        height: 15vw;
+        margin: 2vw;
+        display: flex;
+        border-radius: 6px;
+        background-color: var(--primary1);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-2 svg{
+        width: 9vw;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .obj-half-title{
+        width: 28vw;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        justify-content: flex-start;
+    }
+
+    .home-content3{
+        display: grid;
+        gap: 10px;
+        background-color: var(--primary1);
+        margin-top: 30px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-family: myfont, 'Arial';
+        border-radius: 6px;
+        padding: 6vw;
+        color: var(--secondary2);
+    }
+
+    .home-content3 p:nth-child(1){
+        font-size: 22px;
+    }
+
+    .home-content3 p:nth-child(2){
+        color: var(--secondary1);
+    }
+
+    .home-content3 p:nth-child(3){
+        background-color: var(--primary2);
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .todo-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 15px;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: myboldfont;
+    }
+
+    .todo-items{
+        display: grid;
+        place-items: center;
+        align-items: center;
+        width: 25vw;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 20px var(--shadow);
+        border-radius: 6px;
+        background-color: var(--light);
+    }
+
+    .todo-items svg{ 
+        width: 30vw;
+    }
+
+    .todo-items p{
+        font-size: 2.3vw;
+        color: var(--gray);
+    }
+
+    .todo-items div{
+        box-sizing: content-box;
+        background-color: var(--primary1);
+        padding: 2vw;
+        width: 7vw;
+        height: 7vw;
+        margin-top: 5vw;
+        border-radius: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .todo-items img{
+        width: 6vw;
+    }
+
+    .transaction-stats-container{
+        display: grid;
+        /* gap: 10px; */
+        margin: auto;
+        place-items: center;
+        background-color: var(--light);
+        margin-top: 30px;
+        box-shadow: 0px 0px 20px var(--shadow);
+        border-radius: 6px;
+        padding-top: 6vw;
+        color: var(--gray);
+        width: 94vw;
+    }
+
+    .transaction-stats-container svg{
+        border-radius: 2vw;
+        padding: 2vw;
+        background-color: var(--primary1);
+    }
+    .stats-title{
+        font-family: myBoldfont, 'Arial';
+        font-size: 6vw;
+        width: 89vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .stats-items{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid;
+        width: 90vw;
+        padding: 20px;
+    }
+
+    .stats-items svg{
+        display: flex;
+        justify-content: center;
+        width: 50px;
+    }
+
+    .stats-items div{
+        width: 41vw;
+        text-align: start;
+    }
+
+    .stats-items div p:nth-child(1){
+        font-size: 4.5vw;
+        color: var(--gray2);
+    }
+
+    .stats-items div p:nth-child(2){
+        font-size: 4.5vw;
+        color: var(--gray);
+        font-family: myfont, 'Arial';
+    }
+}

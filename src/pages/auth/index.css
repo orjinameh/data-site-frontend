@@ -1,0 +1,65 @@
+@media (max-width:650px) {
+    .sign-up-page img{
+        width: 12vw;
+        margin-right: 3vw;
+    }
+    .resp{
+        color: crimson;
+        font-family: myboldfont;
+    }
+    .attent-reg p{
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 8vw;
+        color: var(--gray);
+        font-family: myboldfont;
+    }
+    .reg{
+        justify-content: center;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 10vw;
+        font-family: myboldfont;
+    }
+    .reg p{
+        margin: 0;
+    }
+    .sign-up-page form{
+        display: grid;
+        place-items: center;
+        gap: 10px;
+    }
+    .sign-up-page form input,button,.a{
+        height: 40px;
+        outline: none;
+        border: none;
+        background-color: #00000000;
+        font-size: 4vw;
+        font-family: myboldfont;
+    }
+    .form-reg{
+        padding-left: 4vw;
+        padding-right: 5px;
+        border: 3px solid;
+        border-radius: 10px;
+        width: 94vw;
+        box-sizing: border-box;
+    }
+    .attent-reg{
+        padding: 10px;
+    }
+    .sign-up-page button,.a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        background-color: var(--dark);
+        text-align: center;
+        width: 94vw;
+        border-radius: 10px;
+    }
+}

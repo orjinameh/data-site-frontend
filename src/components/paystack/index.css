@@ -1,0 +1,40 @@
+.paystack-div{
+    padding-top: 10vh;
+    text-align: center;
+    font-family: myfont;
+    font-size: 4.5vw;
+}
+
+.paystack-div  form{
+    padding: 2vw;
+    padding-top: 5vh;
+    margin: auto;
+    margin-top: 5vh;
+    width: 80vw;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px;
+}
+
+.paystack-div form label{
+    font-family: myboldfont;
+}
+
+.paystack-div input{
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid gray;
+padding: 5px;
+    width: 70vw;
+    height: 5vh;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 5vw;
+}
+
+.paystack-div button{
+    margin: 5vw;
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: var(--secondary1);
+    background-color: var(--primary1);
+}

@@ -1,0 +1,26 @@
+.modal-background{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(3px);
+}
+
+.modal-pa-div{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70vw;
+    background-color: var(--primary3);
+    color: gray;
+}

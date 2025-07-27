@@ -1,0 +1,68 @@
+@media (max-width:650px) {
+    .intro-container{
+        background-color: var(--primary1);
+        padding-left: 10px;
+        padding-right: 10px;
+        color: var(--light);
+        margin: auto;
+        margin-top: 9.5vh;
+        width: 95vw;
+        height: 40vw;
+        border-radius: 10px;
+    }
+/* 
+    .fund-wallet{
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        height: 30px;
+        font-family: myboldFont;
+        color: var(--secondary2);
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+    .obj-cont-comp-title{
+        padding: 1vw;
+        font-size: 5vw;
+        display: grid;
+        gap: 0;
+        align-content: start;
+        text-align: center;
+    }
+    .obj-cont-comp-title p:nth-child(2){
+        color: var(--secondary2);
+        font-family: myboldfont, 'Arial';
+        font-weight: bolder;
+        font-size: 14vw;
+        margin: 0px auto;
+        padding: 0px;
+    }
+    .home-content1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 15px;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .home-content2{
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .obj-cont-comp-title a{
+        text-align: center;
+        font-family: myfont, 'Arial';
+        background-color: var(--primary1-shadow);
+        font-size: 6vw;
+        box-shadow: blur(10px);
+        border-radius: 8px;
+    }
+}
